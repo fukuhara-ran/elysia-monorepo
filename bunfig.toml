@@ -1,0 +1,9 @@
+[install]
+frozenLockfile = false
+exact = false
+
+[install.cache]
+disable = false
+
+[test]
+preload = []

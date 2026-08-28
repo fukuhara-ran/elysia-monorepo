@@ -1,0 +1,20 @@
+{
+  "name": "elysia-monorepo",
+  "private": true,
+  "type": "module",
+  "workspaces": ["server", "client", "shared"],
+  "scripts": {
+    "dev": "bun run --filter '*' --parallel dev",
+    "typecheck": "bun run --filter '*' typecheck",
+    "db:generate": "bun run --filter './server' db:generate",
+    "db:migrate": "bun run --filter './server' db:migrate",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.4.0",
+    "husky": "^9.1.7"
+  },
+  "peerDependencies": {
+    "typescript": "^6.0.3"
+  }
+}
